@@ -32,3 +32,6 @@ deploy:
     heroku container:release web --app $HEROKU_APP
   on:
     branch: master
+
+  notifications:
+    slack: justmaho:PWcuoJOJBreyeCP35p8PfDq9
