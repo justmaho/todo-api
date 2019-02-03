@@ -23,7 +23,7 @@ script:
   - yarn build:docker
   - docker tag justmaho/todo-api:latest registry.heroku.com/$HEROKU_APP/web
 
-  addons:
+addons:
   sonarcloud:
     organization: "justmaho-github"
     token:
