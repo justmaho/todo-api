@@ -33,5 +33,5 @@ deploy:
   on:
     branch: master
 
-  notifications:
-    slack: justmaho:PWcuoJOJBreyeCP35p8PfDq9
+notifications:
+  slack: justmaho:PWcuoJOJBreyeCP35p8PfDq9
