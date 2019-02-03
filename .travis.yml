@@ -23,6 +23,14 @@ script:
   - yarn build:docker
   - docker tag justmaho/todo-api:latest registry.heroku.com/$HEROKU_APP/web
 
+  addons:
+  sonarcloud:
+    organization: "justmaho-github"
+    token:
+      secure: "N3ilVvD7Cj1uKT9aa2Uillz5WqRwdf6LDQXxi4eC6Bjc+lRT8XVIs89wK5Nh7GQdAqaJYeBLkwk4/cQscSr2sZ5gmlAlDzYmQM+00muVDQN6ehu03B0997bmWYDFfBADtIbUcmqLq4tOPz8zTKPCY2+B1hoOLEi+PrXPKcRN4hxE8yOwyBn2bqkIPM0wDAnmTarwZFB2UKyV+uMJ40oCgUruQ/3QiRZPWwYphY02jPHLnVGC+x+c+F18BxgwOy7rlROg4wakEmJD8fViGuFbIv5Yr0KpT+WqCayDGkhoO8DqxDuyXDn7A/MMuy01OC1xfqC6EWDGJ4xYbevBtDMeO4k2XtYlRDvErO2kcnVaUQhjI7AbiHsoji6iakaYu2EbtHDy4wcLemVvAXj8jZ49REIkfQYpWUONaw7a88uaj0cX1JEwB8ZH4/PmHGvq7zZ+L0DU9ATRyjMtbbTeEwKdRGynKhI0ozO+xp8QSAl6huLSi+eBuBIy0EvD8Lqsvrr275CEVz3OYVo9COWW3lo+/rsRr4Jgp6M1yNtcOzPAGx02x3YriG/gM/OxvKaM2jOBgZsi8xVGIRHOOOlB/oHrxHq/9rGVbE6mQR52gaYcSDLCO2243Iyazu/pb8tvTiGBJaSBcRIcR2DVpqLWVsDDbNU7AJdUWLkbl/etmQQWRD4="
+script:
+  - sonar-scanner
+
 deploy:
   provider: script
   script: 
